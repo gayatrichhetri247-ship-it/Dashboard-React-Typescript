@@ -2,8 +2,34 @@ import { FcGoogle } from "react-icons/fc";
 import { PiAppleLogoDuotone } from "react-icons/pi";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import logo from "../assets/images/dreamlogo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+
+interface LoginForm {
+    email:string,
+    password:string
+}
 const Login = () => {
+    const navigate = useNavigate()
+    const [formData, setFormData] = useState<LoginForm>({
+        email:"",
+        password:""
+    })
+
+    const handleChange  = (event:React.ChangeEvent<HTMLInputElement>) =>{
+        const {name,value} = event.target;
+        setFormData((prev)=>({
+            ...prev,
+            [name]:value,
+        }))
+
+    }
+    const formHandler = (event:React.FormEvent<HTMLFormElement>) =>{
+       event.preventDefault()
+       console.log(formData)
+       navigate("/dashboard")
+    }
   return (
     <div className="w-full h-auto p-6 flex items-center justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950">
       <div className="w-150 px-8 py-4 h-auto flex flex-col gap-6 items-center bg-slate-950 text-white rounded-2xl shadow-2xl ">
@@ -16,10 +42,10 @@ const Login = () => {
           </div>
         </div>
         <div className="w-full">
-          <form className="flex flex-col gap-4">
+          <form onSubmit={formHandler} className="flex flex-col gap-4">
             <div className="flex flex-col text-lg gap-2">
               <label className="font-bold">Email Address</label>
-              <input type="email" placeholder="you@example.com" className="px-4 py-2 rounded-lg bg-slate-800" />
+              <input name="email" type="email" placeholder="you@example.com" value={formData.email} onChange={handleChange} className="px-4 py-2 rounded-lg bg-slate-800" />
             </div>
             <div className="flex flex-col gap- ">
               <div className="flex justify-between text-lg">
@@ -28,7 +54,7 @@ const Login = () => {
               </div>
 
               <div className="relative ">
-                <input type="password" placeholder="********" className="w-full px-4 py-2 rounded-lg bg-slate-800" />
+                <input name="password" type="password" placeholder="********" value={formData.password} onChange={handleChange} className="w-full px-4 py-2 rounded-lg bg-slate-800" />
                 <AiOutlineEyeInvisible className="absolute top-3 right-4"/>
               </div>
             </div>
@@ -36,7 +62,7 @@ const Login = () => {
               <input type="checkbox"  />
               <span>Remember me</span>
             </div>
-            <button className="w-full bg-blue-700 font-bold px-4 py-2.5 rounded-2xl text-xl cursor-pointer">Sign In</button>
+            <button type="submit" className="w-full bg-blue-700 font-bold px-4 py-2.5 rounded-2xl text-xl cursor-pointer">Sign In</button>
 
             <p className="text-center text-lg text-gray-500 ">Or sign in with</p>
 

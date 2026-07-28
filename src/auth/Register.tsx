@@ -2,8 +2,46 @@ import { FcGoogle } from "react-icons/fc";
 import { PiAppleLogoDuotone } from "react-icons/pi";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import logo from "../assets/images/dreamlogo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+interface RegisterForm{
+    firstname:string,
+    lastname:string,
+    email:string,
+    password:string,
+    confirmpassword:string
+
+}
 const Register = () => {
+    const navigate = useNavigate();
+    const [formData, setFormData] = useState<RegisterForm>({
+        firstname:"",
+        lastname:"",
+        email:"",
+        password:"",
+        confirmpassword:""
+
+    })
+
+    const handleInput = (e:React.ChangeEvent<HTMLInputElement>)=>{
+        const {name,value}= e.target;
+        setFormData((prev)=>({
+            ...prev,
+            [name]:value
+        }))
+    }
+
+    const formHandler = (e:React.FormEvent<HTMLFormElement>)=>{
+        e.preventDefault();
+        if(formData.password!=formData.confirmpassword){
+            alert("Passwords do not match");
+            
+        }
+        alert("Registration Successful.")
+        console.log(formData)
+        navigate("/login")
+    }
   return (
     <div className="w-full h-auto flex items-center p-6 justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950">
       <div className="w-150 px-8 py-4 h-auto flex flex-col gap-6 items-center bg-slate-950 text-white rounded-2xl shadow-2xl ">
@@ -18,12 +56,14 @@ const Register = () => {
           </div>
         </div>
         <div className="w-full">
-          <form className="flex flex-col gap-4">
+          <form onSubmit={formHandler} className="flex flex-col gap-4">
             <div className="flex text-lg w-full justify-between ">
               <div className="flex flex-col gap-2">
                 <label className="font-bold">First Name</label>
                 <input
                   type="text"
+                  name="firstname"
+                  onChange={handleInput}
                   placeholder="First Name"
                   className="px-4 py-2 rounded-lg bg-slate-800"
                 />
@@ -32,6 +72,8 @@ const Register = () => {
                 <label className="font-bold">Last Name</label>
                 <input
                   type="text"
+                  name="lastname"
+                  onChange={handleInput}
                   placeholder="Last Name"
                   className="px-4 py-2 rounded-lg bg-slate-800"
                 />
@@ -39,7 +81,7 @@ const Register = () => {
             </div>
              <div className="flex flex-col text-lg gap-2">
               <label className="font-bold">Email Address</label>
-              <input type="email" placeholder="you@example.com" className="px-4 py-2 rounded-lg bg-slate-800" />
+              <input type="email" name="email" onChange={handleInput} placeholder="you@example.com" className="px-4 py-2 rounded-lg bg-slate-800" />
             </div>
             <div className="flex flex-col gap-2 ">
                 <label className="font-bold">Password</label>
@@ -47,6 +89,8 @@ const Register = () => {
               <div className="relative ">
                 <input
                   type="password"
+                  name="password"
+                  onChange={handleInput}
                   placeholder="********"
                   className="w-full px-4 py-2 rounded-lg bg-slate-800"
                 />
@@ -59,13 +103,15 @@ const Register = () => {
               <div className="relative ">
                 <input
                   type="password"
+                  name="confirmpassword"
+                  onChange={handleInput}
                   placeholder="********"
                   className="w-full px-4 py-2 rounded-lg bg-slate-800"
                 />
                 <AiOutlineEyeInvisible className="absolute top-3 right-4" />
               </div>
             </div>
-            <button className="w-full  bg-blue-700 font-bold px-4 py-2.5 rounded-2xl text-xl cursor-pointer mt-2">
+            <button type="submit" className="w-full  bg-blue-700 font-bold px-4 py-2.5 rounded-2xl text-xl cursor-pointer mt-2">
               Sign up
             </button>
              <div className="flex gap-2 y-2.5 " >
