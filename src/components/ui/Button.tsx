@@ -21,7 +21,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`${width} ${bgColor} ${borderColor} ${textColor} flex justify-center items-center gap-2 font-bold px-4 py-2.5 rounded-2xl text-xl cursor-pointer`}
+      className={`${width} ${bgColor} ${borderColor} ${textColor} flex justify-center items-center gap-2 font-bold px-4 py-2.5 rounded-2xl text-base cursor-pointer`}
     >
       {icon}
       <span>{title}</span>

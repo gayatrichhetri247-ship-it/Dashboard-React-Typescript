@@ -44,22 +44,22 @@ const Register = () => {
   };
   return (
     <div className="w-full min-h-screen flex items-center p-6 justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950">
-      <div className="w-150 px-8 py-4 h-auto flex flex-col gap-6 items-center bg-slate-950 text-white rounded-2xl shadow-2xl ">
-        <div className="flex flex-col items-center ">
-          <img src={logo} alt="logo" className="h-auto w-80 " />
+      <div className="w-120 px-8 py-10 h-auto flex flex-col gap-2 items-center bg-slate-950 text-white rounded-2xl shadow-2xl ">
+        <div className="flex flex-col gap-2 items-center ">
+          <img src={logo} alt="logo" className="h-auto w-54 " />
 
-          <div className="flex flex-col items-center mt-[-40px]">
+          <div className="flex flex-col items-center">
             <h1 className="text-2xl font-bold">Hey There!</h1>
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-base">
               Sign up to get started with Dreams ERP
             </p>
           </div>
         </div>
         <div className="w-full">
           <form onSubmit={formHandler} className="flex flex-col gap-4">
-            <div className="flex text-lg w-full gap-4">
+            <div className="flex text-lg gap-4 w-full">
               <Input label="First Name" type="text" placeholder="first name" />
-              <Input label="Last Name" type="text" placeholder="last name" />
+              <Input label="Last Name" type="text" placeholder="last name"  />
             </div>
             <Input type="email" label="Email" placeholder="your@example.com" />
             <div className="relative ">
@@ -76,7 +76,7 @@ const Register = () => {
 
               <AiOutlineEyeInvisible className="absolute top-12 right-4" />
             </div>
-            <Button type="button" title="Sign in" />
+            <Button type="button" title="Sign up" />
             <Checkbox
               type="checkbox"
               title="I agree to Terms of Service and Privacy Policy"

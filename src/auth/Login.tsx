@@ -33,13 +33,13 @@ const Login = () => {
   };
   return (
     <div className="w-full min-h-screen p-6 flex items-center justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950">
-      <div className="w-150 px-8 py-4 h-auto flex flex-col gap-6 items-center bg-slate-950 text-white rounded-2xl shadow-2xl ">
-        <div className="flex flex-col items-center ">
-          <img src={logo} alt="logo" className="h-auto w-80 " />
+      <div className="w-120 px-8 py-10 h-auto flex flex-col gap-2 items-center bg-slate-950 text-white rounded-2xl shadow-2xl ">
+        <div className="flex flex-col gap-2 items-center ">
+          <img src={logo} alt="logo" className="h-auto w-54 " />
 
-          <div className="flex flex-col items-center mt-[-40px]">
-            <h1 className="text-2xl font-bold">Welcome Back!</h1>
-            <p className="text-gray-500 text-lg">
+          <div className="flex flex-col items-center ">
+            <h1 className="text-xl font-bold">Welcome Back!</h1>
+            <p className="text-gray-500 text-base">
               Sign in to your Dreams ERP account
             </p>
           </div>
@@ -67,7 +67,7 @@ const Login = () => {
               
             />
 
-            <p className="text-center text-lg text-gray-500 ">
+            <p className="text-center text-base text-gray-500 ">
               Or sign in with
             </p>
 
@@ -92,7 +92,7 @@ const Login = () => {
             />
             </div>
           </form>
-          <div className="flex gap-2 justify-center mt-4 mb-4 text-lg">
+          <div className="flex gap-2 justify-center mt-4  text-base">
             <span>Don't have an account?</span>
             <Link to="/register">
               <span className="text-blue-700 cursor-pointer font-bold">
