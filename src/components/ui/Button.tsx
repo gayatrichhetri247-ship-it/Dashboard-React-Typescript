@@ -15,13 +15,13 @@ const Button = ({
   width = "w-full",
   bgColor = "bg-blue-700",
   borderColor = "border-transparent",
-  textColor = "text-white",
+  textColor = "text-gray-600",
   icon,
 }: ButtonProps) => {
   return (
     <button
       type={type}
-      className={`${width} ${bgColor} ${borderColor} ${textColor} flex justify-center items-center gap-2 font-bold px-4 py-2.5 rounded-2xl text-base cursor-pointer`}
+      className={`${width} ${bgColor} ${borderColor} ${textColor} flex justify-center items-center gap-2 font-normal px-4 py-2.5 rounded-md text-sm cursor-pointer`}
     >
       {icon}
       <span>{title}</span>

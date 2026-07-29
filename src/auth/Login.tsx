@@ -7,6 +7,7 @@ import { useState } from "react";
 import Input from "../components/ui/Input";
 import Checkbox from "../components/ui/Checkbox";
 import Button from "../components/ui/Button";
+import { Key, Mail, UserRound } from "lucide-react";
 
 interface LoginForm {
   email: string;
@@ -32,30 +33,29 @@ const Login = () => {
     navigate("/dashboard");
   };
   return (
-    <div className="w-full min-h-screen p-6 flex items-center justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950">
-      <div className="w-120 px-8 py-10 h-auto flex flex-col gap-2 items-center bg-slate-950 text-white rounded-2xl shadow-2xl ">
+    <div className="w-full min-h-screen p-6 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-50">
+      <div className="w-120 px-8 py-10 h-auto flex flex-col gap-2 font-roboto items-center bg-white text-gray-700 rounded-md shadow-md ">
         <div className="flex flex-col gap-2 items-center ">
           <img src={logo} alt="logo" className="h-auto w-54 " />
 
           <div className="flex flex-col items-center ">
             <h1 className="text-xl font-bold">Welcome Back!</h1>
-            <p className="text-gray-500 text-base">
+            <p className="text-gray-500 mt-1 text-xs">
               Sign in to your Dreams ERP account
             </p>
           </div>
         </div>
         <div className="w-full">
           <form onSubmit={formHandler} className="flex flex-col gap-4">
-            <Input type="email" label="Email" placeholder="your@example.com" />
+            <Input type="email" label="Email Address" placeholder="your@example.com" prefixIcon={<UserRound className="size-4" />} />
 
-            <div className="flex flex-col gap- ">
+            <div className="flex flex-col">
               <div className="relative ">
-                <Input type="password" label="Password" placeholder="*******" />
-
-                <AiOutlineEyeInvisible className="absolute top-12 right-4" />
+                <Input type="password" label="Password" placeholder="*******" prefixIcon={<Key className="size-4" />} suffixIcon={<AiOutlineEyeInvisible className="size-4" />} />
+                
               </div>
-              <div className="text-right mt-2 flex justify-between">
-                <Checkbox type="checkbox" title="Remember me" />
+              <div className="text-right my-3 flex text-sm justify-between">
+                <Checkbox id="remember_me" title="Remember me" />
                 <span className="text-blue-700">Forgot Password?</span>
               </div>
             </div>
@@ -63,11 +63,10 @@ const Login = () => {
             <Button
               type="button"
               title="Sign in"
-             
-              
+              textColor="text-white"
             />
 
-            <p className="text-center text-base text-gray-500 ">
+            <p className="text-center text-sm font-light text-gray-500 ">
               Or sign in with
             </p>
 
@@ -77,7 +76,7 @@ const Login = () => {
               title="Google"
               bgColor="bg-none"
               width="w-1/2"
-              borderColor="border border-gray-500"
+              borderColor="border border-gray-200"
               icon={<FcGoogle/>}
               
             />
@@ -86,16 +85,16 @@ const Login = () => {
               title="Apple"
               bgColor="bg-none"
               width="w-1/2"
-              borderColor="border border-gray-500"
+              borderColor="border border-gray-200"
               icon={<PiAppleLogoDuotone/>}
               
             />
             </div>
           </form>
-          <div className="flex gap-2 justify-center mt-4  text-base">
+          <div className="flex gap-2 justify-center text-gray-400 font-normal mt-4 select-none text-sm">
             <span>Don't have an account?</span>
             <Link to="/register">
-              <span className="text-blue-700 cursor-pointer font-bold">
+              <span className="text-blue-700/70 hover:underline cursor-pointer font-bold">
                 Sign up
               </span>{" "}
             </Link>

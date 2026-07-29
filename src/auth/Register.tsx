@@ -78,7 +78,7 @@ const Register = () => {
             </div>
             <Button type="button" title="Sign up" />
             <Checkbox
-              type="checkbox"
+            id="is_agree"
               title="I agree to Terms of Service and Privacy Policy"
             />
 
