@@ -95,7 +95,7 @@ const SideBar = () => {
         <RxCross2 />
       </div>
       <div className="w-full border-t-[0.1px] border-gray-300"></div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Main</h1>
         <div className="flex flex-col gap-2">
           <Dropdown
@@ -143,7 +143,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Inventory</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -179,7 +179,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Sales</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -229,7 +229,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Purchase</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -255,7 +255,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Finance</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -302,7 +302,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">HRM</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -363,7 +363,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">CRM</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -400,7 +400,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Projects</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -433,7 +433,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">POS</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -465,7 +465,7 @@ const SideBar = () => {
         </div>
       </div>
 
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Assets</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -501,7 +501,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Documents</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -526,7 +526,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Support</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -551,7 +551,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Membership</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -571,7 +571,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">System</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -596,7 +596,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2   flex flex-col gap-2 ">
         <h1 className="font-bold ">Pages</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -616,7 +616,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2  ">
+      <div className="px-2   flex flex-col gap-2  ">
         <h1 className="font-bold ">UI Interface</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem
@@ -651,7 +651,7 @@ const SideBar = () => {
           />
         </div>
       </div>
-      <div className="px-2 text-base flex flex-col gap-2 ">
+      <div className="px-2  flex flex-col gap-2 ">
         <h1 className="font-bold ">Help</h1>
         <div className="flex flex-col gap-2">
           <SidebarItem

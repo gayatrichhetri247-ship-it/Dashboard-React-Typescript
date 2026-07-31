@@ -15,7 +15,7 @@ const SidebarItem = ({
       <div
          className="w-60 px-2 py-1 flex justify-between items-center cursor-pointer font-semibold text-gray-600 hover:bg-slate-900 hover:text-white rounded-lg"
       >
-        <div className="flex items-center gap-1 text-sm">
+        <div className="flex items-center gap-1 ">
           {icon}
           <span className={isCapitalize ? "capitalize" : ""}>{title}</span>
         </div>

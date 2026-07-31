@@ -1,12 +1,12 @@
 import { FcGoogle } from "react-icons/fc";
 import { PiAppleLogoDuotone } from "react-icons/pi";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
-import logo from "../assets/images/dreamlogo.png";
+import logo from "../../assets/images/dreamlogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Input from "../components/ui/Input";
-import Button from "../components/ui/Button";
-import Checkbox from "../components/ui/Checkbox";
+import Input from "../../components/ui/Input";
+import Button from "../../components/ui/Button";
+import Checkbox from "../../components/ui/Checkbox";
 
 interface RegisterForm {
   firstname: string;
@@ -65,7 +65,6 @@ const Register = () => {
             <div className="relative ">
               <Input type="password" label="Password" placeholder="*******" />
 
-              <AiOutlineEyeInvisible className="absolute top-12 right-4" />
             </div>
             <div className="relative ">
               <Input
@@ -78,7 +77,7 @@ const Register = () => {
             </div>
             <Button type="button" title="Sign up" />
             <Checkbox
-              type="checkbox"
+            id="is_agree"
               title="I agree to Terms of Service and Privacy Policy"
             />
 
@@ -107,7 +106,7 @@ const Register = () => {
           </form>
           <div className="flex gap-2 justify-center mt-4 mb-4 text-lg">
             <span>Already have an account?</span>
-            <Link to="/login">
+            <Link to="/">
               <span className="text-blue-700 cursor-pointer font-bold">
                 Sign In
               </span>

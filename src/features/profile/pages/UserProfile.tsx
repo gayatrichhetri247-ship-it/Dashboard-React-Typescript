@@ -1,6 +1,6 @@
 import React from 'react';
-import Profile from '../components/ui/Profile';
-import PersonalInformation from '../components/ui/PersonalInformation';
+import Profile from '../components/Profile';
+import PersonalInformation from '../components/PersonalInformation';
 
 const UserProfile = () => {
   return (

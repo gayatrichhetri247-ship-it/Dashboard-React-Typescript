@@ -17,7 +17,7 @@ const Dropdown = ({title,icon,items, isCapitalize = false}:DropdownProps) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-60 px-2 py-1 flex justify-between items-center cursor-pointer font-semibold text-gray-600 hover:bg-slate-900 hover:text-white rounded-lg"
       >
-        <div className="flex items-center gap-1 text-sm ">
+        <div className="flex items-center gap-1">
           {icon}
           <span className={isCapitalize?"capitalize":""}>{title}</span>
         </div>
@@ -25,7 +25,7 @@ const Dropdown = ({title,icon,items, isCapitalize = false}:DropdownProps) => {
       </div>
 
       {isOpen && (
-        <ul className="w-fit px-2 ml-10 flex flex-col gap-2 text-sm  ">
+        <ul className="w-fit px-2 ml-10 mt-1 flex flex-col gap-2   ">
           {items.map((item) => (
             <li key={item} className={`list-disc cursor-pointer hover:text-green-600 text-gray-500 font-semibold ${isCapitalize?"capitalize":""}`}>
               {item}

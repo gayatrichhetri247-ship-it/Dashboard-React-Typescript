@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/images/profileimg.webp"
+import profile from "../../../assets/images/profileimg.webp"
 const Profile = () => {
   return (
     <div className="min-w-auto h-screen flex flex-col items-center justify-center  ">
