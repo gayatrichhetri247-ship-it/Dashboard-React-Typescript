@@ -1,7 +1,7 @@
 import React from 'react'
-import Input from '../../../components/ui/Input'
-import TextArea from '../../../components/ui/TextArea'
-import Button from '../../../components/ui/Button'
+import Input from './Input'
+import TextArea from './TextArea'
+import Button from './Button'
 const PersonalInformation = () => {
   return (
     <div className=' h-screen flex justify-center items-center'>

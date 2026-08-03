@@ -50,7 +50,7 @@ const Login = () => {
 
             <div className="flex flex-col">
               <div className="relative ">
-                <Input type="password" label="Password" placeholder="*******" prefixIcon={<Key className="size-4" />} />
+                <Input type="password" label="Password" placeholder="••••••••" prefixIcon={<Key className="size-4" />} />
                 
               </div>
               <div className="text-right my-3 flex text-sm justify-between">

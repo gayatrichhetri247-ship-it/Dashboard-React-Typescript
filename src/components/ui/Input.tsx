@@ -7,6 +7,7 @@ interface InputProps {
   width?: string;
   prefixIcon?: React.ReactNode;
   suffixIcon?: React.ReactNode;
+  isCapitalized?:boolean;
   onSuffixClick?: () => void;
 }
 
@@ -17,11 +18,12 @@ const Input = ({
   width = "w-full",
   prefixIcon,
   suffixIcon,
+  isCapitalized=false,
   onSuffixClick,
 }: InputProps) => {
   return (
     <div className="flex flex-col gap-2 w-full text-sm">
-      <label className="font-bold">{label}</label>
+      <label className={`font-bold ${isCapitalized?"capitalize":""}`}>{label}</label>
       <div
         className={`${width} flex items-center gap-2 px-3 py-2 rounded-md bg-white border border-gray-200 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500`}
       >
@@ -35,7 +37,7 @@ const Input = ({
           type={type}
           placeholder={placeholder}
           onChange={() => {}}
-          className="w-full outline-none bg-transparent"
+          className={`w-full outline-none bg-transparent ${isCapitalized?"capitalize":""}`}
         />
 
         {suffixIcon && (
