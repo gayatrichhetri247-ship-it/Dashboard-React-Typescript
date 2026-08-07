@@ -47,20 +47,20 @@ const Register = () => {
         <div className="w-full">
           <form onSubmit={formHandler} className="flex flex-col gap-4">
             <div className=" flex space-x-4">
-            <Input type="text" label="first name" placeholder="first name" isCapitalized={true} />
+            <Input type="text" label="first name" placeholder="first name" isCapitalized={true} className="px-3 py-2 mt-2" />
 
-            <Input type="text" label="last name" placeholder="last name" isCapitalized={true} />
+            <Input type="text" label="last name" placeholder="last name" isCapitalized={true} className="px-3 py-2 mt-2"/>
 
             </div>
-            <Input type="email" label="Email Address" placeholder="your@example.com" prefixIcon={<UserRound className="size-4" />} />
+            <Input type="email" label="Email Address" placeholder="your@example.com" prefixIcon={<UserRound className="size-4" />} className="px-3 py-2 mt-2"/>
 
             <div className="flex flex-col gap-4">
               <div className="relative ">
-                <Input type="password" label="Password" placeholder="••••••••" prefixIcon={<Key className="size-4" />} />
+                <Input type="password" label="Password" placeholder="••••••••" prefixIcon={<Key className="size-4" />} className="px-3 py-2 mt-2"/>
                 
               </div>
               <div className="relative ">
-                <Input type="password" label="Confirm Password" placeholder="••••••••" prefixIcon={<Key className="size-4" />} />
+                <Input type="password" label="Confirm Password" placeholder="••••••••" prefixIcon={<Key className="size-4" />} className="px-3 py-2 mt-2"/>
               </div>
               <div className="text-right my-3 flex text-sm justify-between">
                 <Checkbox id="remember_me" title="I agree to Terms of Service and Privacy Policy" />

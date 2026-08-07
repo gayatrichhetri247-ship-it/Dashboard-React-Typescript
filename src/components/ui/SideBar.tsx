@@ -100,6 +100,7 @@ const SideBar = () => {
         <div className="flex flex-col gap-2">
           <Dropdown
             title="dashboard"
+            className="px-2 ml-10"
             items={[
               "HRM Dashboard",
               "Inventory Dashboard",
@@ -116,6 +117,7 @@ const SideBar = () => {
           />
           <Dropdown
             title="applications"
+            className="px-2 ml-10"
             items={[
               "chat",
               "calls",
@@ -131,6 +133,7 @@ const SideBar = () => {
           />
           <Dropdown
             title="layouts"
+            className="px-2 ml-10"
             items={[
               "mini sidebar",
               "hover view",
@@ -173,6 +176,7 @@ const SideBar = () => {
           />
           <Dropdown
             title="stock"
+            className="px-2 ml-10"
             icon={<BsBoxArrowUpRight />}
             isCapitalize={true}
             items={["manage stock", "stock adjustment", "stock transfer"]}
@@ -290,6 +294,7 @@ const SideBar = () => {
           />
           <Dropdown
             title="reports"
+            className="px-2 ml-10"
             icon={<HiOutlineDocumentReport />}
             isCapitalize={true}
             items={[
@@ -327,6 +332,7 @@ const SideBar = () => {
           />
           <Dropdown
             title="leave"
+            className="px-2 ml-10"
             icon={<GiInterleavedArrows />}
             isCapitalize={true}
             items={["leaves", "leave types"]}

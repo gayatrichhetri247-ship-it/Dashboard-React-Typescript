@@ -46,11 +46,11 @@ const Login = () => {
         </div>
         <div className="w-full">
           <form onSubmit={formHandler} className="flex flex-col gap-4">
-            <Input type="email" label="Email Address" placeholder="your@example.com" prefixIcon={<UserRound className="size-4" />} />
+            <Input type="email" label="Email Address" placeholder="your@example.com" prefixIcon={<UserRound className="size-4" />} className="px-3 py-2 mt-2"/>
 
             <div className="flex flex-col">
               <div className="relative ">
-                <Input type="password" label="Password" placeholder="••••••••" prefixIcon={<Key className="size-4" />} />
+                <Input type="password" label="Password" placeholder="••••••••" prefixIcon={<Key className="size-4" />} className="px-3 py-2 mt-2" />
                 
               </div>
               <div className="text-right my-3 flex text-sm justify-between">
